@@ -8,5 +8,5 @@ streamlit==1.36.0
 streamlit_chat==0.1.1
 transformers==4.46.3
 Pillow==10.0.0 --only-binary=:all:
-tensorflow==2.0
+tensorflow==2.18.0
 
