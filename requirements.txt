@@ -3,15 +3,9 @@ langchain_google_genai==2.0.7
 matplotlib==3.8.4
 numpy==2.2.0
 pandas==2.2.3
-Pillow==11.0.0
 python-dotenv==1.0.1
 streamlit==1.36.0
 streamlit_chat==0.1.1
 transformers==4.46.3
-langchain==0.3.8
-langchain_google_genai==2.0.5
 Pillow==10.0.0 --only-binary=:all:
-python-dotenv==1.0.1
-streamlit==1.36.0
-streamlit_chat==0.1.1
-transformers==4.46.3
+
