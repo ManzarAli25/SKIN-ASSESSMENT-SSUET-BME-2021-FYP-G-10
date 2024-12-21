@@ -9,4 +9,4 @@ streamlit_chat==0.1.1
 transformers==4.46.3
 Pillow==10.0.0 --only-binary=:all:
 tensorflow
-
+tf_keras==2.18.0
