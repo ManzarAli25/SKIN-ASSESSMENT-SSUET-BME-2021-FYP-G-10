@@ -58,7 +58,7 @@ st.markdown('<center><div class="custom-title">💆‍♀️🧴AUTOMATED SKIN T
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Load model and initialize Google Generative AI
-@st.cache
+@st.cache_resource
 def load_model():
     return pipeline("image-classification", model="imfarzanansari/skintelligent-acne")
 
