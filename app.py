@@ -62,7 +62,7 @@ GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 def load_model():
     return pipeline("image-classification", model="imfarzanansari/skintelligent-acne")
 
-pipe = load_model()
+
 gemini = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key=GOOGLE_API_KEY,temperature=0, max_tokens=None, timeout=None, max_retries=2)
 
 # Severity scale
@@ -133,6 +133,7 @@ if opt == "Begin Skin Assessment":
 
             # Step 3: Get Recommendations
             with st.spinner("Classifying..."):
+                pipe = load_model()
                 results = pipe(photo)
                 # Plot severity levels
                 st.subheader("Acne Severity Levels")
