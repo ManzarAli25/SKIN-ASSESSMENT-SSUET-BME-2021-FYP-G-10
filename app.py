@@ -54,12 +54,10 @@ st.markdown( """ <style> /* Custom styling for titles */ .custom-title { color: 
 }
 </style>
 
-<div class="group-members">
-    <center>
+<center>
         <div class="custom-title">SKINLY CURE</div>
         <div class="tagline">Your glow, Engineered</div>
-    </center>      
-</div>
+</center>      
             <div class="member">
         <div class="member-name">Syeda Safa Umrao</div>
         <div class="member-id">2021F-BBM-014</div>
