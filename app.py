@@ -12,49 +12,68 @@ import pandas as pd
 import numpy as np
 
 # Initialize environment
-st.markdown(
-    """
-    <style>
-    .custom-title {
-        color: white; /* Specify your color here */
-        font-size: 40px; /* Adjust the font size if needed */
-        font-weight: bold;
-    }
-    .subtitle {
-        color: white; /* Specify your color here */
-        font-size: 30px; /* Adjust the font size if needed */
-        font-weight: bold;
-    }
-    .plain-text {
-        color: white; /* Specify your color here */
-        font-size: 20px; /* Adjust the font size if needed */
-    }
-    .group-members {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+st.markdown( """ <style> /* Custom styling for titles */ .custom-title { color: white; /* Adjust the text color */ font-size:65px; /* Set the title font size */ font-weight: bold; /* Make the title bold */ text-align: center; /* Center the title text */ margin-bottom: 5px; /* Reduce spacing below the title */ }
 
-        .member {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+/* Styling for the tagline */
+.tagline {
+    color: #cccccc; /* Subtle text color for the tagline */
+    font-size: 30px; /* Set the tagline font size */
+    text-align: center; /* Center the tagline text */
+    margin-bottom: 20px; /* Add spacing below the tagline */
+}
 
-        .member-name {
-            text-align: left;
-        }
+/* Styling for group member list container */
+.group-members {
+    width: 100%; /* Make the container span full width */
+    max-width: 600px; /* Set a maximum width for better readability */
+    margin: 20px auto; /* Center the container and add vertical spacing */
+    background-color: #01073b; /* Add a subtle background color */
+    padding: 15px; /* Add padding inside the container */
+    border-radius: 8px; /* Add rounded corners for better design */
+}
 
-        .member-id {
-            text-align: right;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
+/* Styling for each group member entry */
+.member {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space elements evenly */
+    margin-bottom: 10px; /* Add spacing between entries */
+    color: white; /* Ensure text is visible on dark backgrounds */
+    font-size: 18px; /* Adjust font size for clarity */
+}
+
+/* Align the member's name */
+.member-name {
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow flexible width */
+}
+
+/* Align the member's ID */
+.member-id {
+    text-align: right; /* Align text to the right */
+    flex: 1; /* Allow flexible width */
+}
+</style>
+
+<div class="group-members">
+    <center>
+        <div class="custom-title">SKINLY CURE</div>
+        <div class="tagline">Your glow, Engineered</div>
+    </center>      
+</div>
+            <div class="member">
+        <div class="member-name">Syeda Safa Umrao</div>
+        <div class="member-id">2021F-BBM-014</div>
+    </div>
+    <div class="member">
+        <div class="member-name">Areesha Mushtaq</div>
+        <div class="member-id">2021F-BBM-032</div>
+    </div>
+
+    
+""",
+unsafe_allow_html=True,
 )
 
-# Render the styled title
-st.markdown('<center><div class="custom-title">💆‍♀️🧴AUTOMATED SKIN TREATMENT</div></center><div class="group-members"><div class="member"><div class="member-name">Syeda Safa Umrao</div><div class="member-id">2021F-BBM-014</div></div><div class="member"><div class="member-name">Areesha Mushtaq</div><div class="member-id">2021F-BBM-032</div></div></div>', unsafe_allow_html=True)
 GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 
 # Load model and initialize Google Generative AI
